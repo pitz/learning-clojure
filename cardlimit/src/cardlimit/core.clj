@@ -4,7 +4,6 @@
             [cardlimit.model :as c.model]
             [cardlimit.userlogic :as c.userlogic]))
 
-
 (defn add-user  [users user] (conj users user))
 (defn add-user! [users user-info] (alter users add-user (c.userlogic/create-user (get user-info :id) (get user-info :name) (get user-info :cpf))))
 
