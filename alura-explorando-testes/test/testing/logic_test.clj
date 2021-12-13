@@ -28,6 +28,7 @@
         hospital-com-vaga {:espera [2 245 43 4]}
         hospital-cheio    {:espera [2 245 43 4 novo-paciente]}
         hospital-somente-com-novo-paciente {:espera [novo-paciente]}]
+
     (testing "chega-em-test? adiciona primeiro elemento na fila"
       (is (= hospital-somente-com-novo-paciente
              (chega-em-com-throw hospital-vazio :espera novo-paciente))))

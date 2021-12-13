@@ -24,3 +24,4 @@
     (if-let [novo-hospital (tenta-colocar-na-fila hospital departamento pessoa)]
       {:hospital novo-hospital :resultado :sucesso}
       {:hospital hospital :resultado :erro :descricao-resultado :fila-cheia})))
+
