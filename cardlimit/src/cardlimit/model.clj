@@ -4,6 +4,10 @@
 
 (s/set-fn-validation! true)
 
+(s/defn formart-brl :- s/Str
+  [value :- s/Num]
+  (str "R$ " (format "%.2f" value)))
+
 (defn ge-0? [x] (>= x 0))
 (defn valid-band? [band](some #(= band %) [:starter :gold :platinum :upmarket]))
 
@@ -13,7 +17,7 @@
 
 (def User
   {:id   PosInt
-   :nome s/Str
+   :name s/Str
    :cpf  s/Str})
 
 (def UserScore
