@@ -23,9 +23,6 @@
 
 
 
-
-
-
 (defn serasa-calculate-score [user]
   (let [index-score (rand-int 100)
         score       (get-score-band index-score)]
