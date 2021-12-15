@@ -21,3 +21,45 @@
               :db/cardinality :db.cardinality/one}])
 
 (defn cria-schema [conn] (d/transact conn schema))
+
+(defn get-products
+  [filters db-readonly]
+
+  (println filters)
+  (println (get filters :ident))
+
+  (d/q '[:find ?entidade
+         :where [?entidade :produto/nome]] db-readonly))
+
+(defn get-products-by-slug [filters db-readonly]
+  (println " .... " (get filters :slug))
+
+  (d/q '[:find   ?entidade
+         :in    $ ?slug                           ; $ = bd
+         :where [?entidade :produto/slug ?slug]]
+       db-readonly (get filters :slug)))
+
+(defn get-all-slugs [filters db]
+  (d/q '[:find ?slug
+         :where [_ :produto/slug ?slug]] db))
+
+(defn get-all-slugs [filters db]
+  (println " get-all-slugs @ filters " filters)
+
+  (d/q '[:find ?slug
+         :where [_ :produto/slug ?slug]] db))
+
+(defn get-all-prices [db]
+  (d/q '[:find   ?nome ?preco
+         :keys  produto/nome produto/preco
+         :where [?product :produto/preco ?preco]
+                [?product :produto/nome  ?nome]] db))
+
+(defn get-products-returning-entity [db-readonly]
+  (d/q '[:find (pull ?entidade [:produto/nome :produto/preco :produto/slug])
+         :where [?entidade :produto/nome]] db-readonly))
+
+(defn get-products-returning-entity-generic [db-readonly]
+  (d/q '[:find (pull ?entidade [*])
+         :where [?entidade :produto/nome]] db-readonly))
+
