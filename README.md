@@ -24,4 +24,4 @@ Aqui apresento um compilado de testes. O diferencial entre este projeto e o proj
 Um projeto bem simples aplicando alguns conceitos de defprotocol e defrecord.
 
 ## components
-Projeto aplicando alguns conceitos do framework Component (https://github.com/stuartsierra/component). O código apresentado neste projeto foi obtido através de um treinamento feito por Job Travaini (Lead Software Engineer at Nubank).
+Projeto aplicando alguns conceitos do framework Component (https://github.com/stuartsierra/component). O código apresentado neste projeto foi obtido através de um treinamento feito por Job Travaini (Lead Software Engineer at Nubank). Aqui eu apenas aplico algumas pequenas mudanças e reflito sobre como tudo funciona :).
