@@ -1,30 +1,9 @@
 (ns cardlimit.model
   (:use clojure.pprint)
-  (:require [schema.core :as s]))
+  (:require [schema.core :as s]
+            [cardlimit.utils :as utils]))
 
 (s/set-fn-validation! true)
-
-(s/defn formart-brl :- s/Str
-  [value :- s/Num]
-  (str "R$ " (format "%.2f" value)))
-
-(defn ge-0? [x] (>= x 0))
-(defn valid-band? [band](some #(= band %) [:starter :gold :platinum :upmarket]))
-
-(def PosInt (s/pred pos-int? 'inteiro-positivo))
-(def Band   (s/constrained s/Keyword valid-band?))
-(def NonNegativeNumber (s/constrained s/Num ge-0?))
-
-(def User
-  {:id   PosInt
-   :name s/Str
-   :cpf  s/Str})
-
-(def UserScore
-  {:user          User
-   :band          Band
-   :score         PosInt
-   :initial-limit NonNegativeNumber})
 
 (def user-info-list [{:id 1 :cpf "08861995906" :name "Eduardo Pitz"}
                      {:id 2 :cpf "01461995906" :name "Reuardo Pitz"}
@@ -32,11 +11,8 @@
                      {:id 4 :cpf "07561995906" :name "Vfrardo Pitz"}
                      {:id 5 :cpf "12861995906" :name "Fruardo Pitz"}])
 
-(s/defn parse-band-name :- s/Str
-  [band :- s/Keyword]
-  (case band
-    :starter "Cesta Básica"
-    :gold "Gold"
-    :platinum "Platinum"
-    :upmarket "UV"
-    :else (throw "Usuário inválido.")))
+; isso ta bem ruim.
+(def starter-user-values  { :userscore/band :starter  :userscore/initial-limit 50.00    :userscore/minimum-score 0  })
+(def gold-user-values     { :userscore/band :gold     :userscore/initial-limit 650.00   :userscore/minimum-score 10 })
+(def platinum-user-values { :userscore/band :platinum :userscore/initial-limit 1550.00  :userscore/minimum-score 50 })
+(def upmarket-user-values { :userscore/band :upmarket :userscore/initial-limit 12050.50 :userscore/minimum-score 90 })

@@ -1,6 +1,6 @@
 (ns cardlimit.scorelogic-test
   (:require [clojure.test :refer :all]
-            [cardlimit.scorelogic :refer :all]
+            [cardlimit.sr-scorelogic :refer :all]
             [schema.core :as s])
   (:import (clojure.lang ExceptionInfo)))
 
