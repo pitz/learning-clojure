@@ -1,8 +1,10 @@
 ## Learning Clojure
 Este repositório conterá alguns projetos que estou criando a fim de evoluir meus conhecimentos com Clojure.
-1. [Cálculo de limites para cartões](#card-limit)
-2. [Cálculo de limites para cartões (com Datomic)](#cardlimit-wdb)
-1. [Explorando testes unitários em Clojure (Alura)](#alura-explorando-testes)
+1. [card-limit: Cálculo de limites para cartões](#card-limit)
+2. [cardlimit-wdb: Cálculo de limites para cartões (com Datomic)](#cardlimit-wdb)
+3. [alura-explorando-testes: Explorando testes unitários em Clojure (Alura)](#alura-explorando-testes)
+4. [clojure-property-based-test: Explorando testes de propriedade em Clojure (Alura)](#clojure-property-based-test)
+4. [defprotocoltraining: Bricando um pouco com defprotocol e  defrecord](#clojure-property-based-test)
 
 ## card-limit:
 O projeto card-limit apresenta o meu primeiro contato com o uso de `schema.core` e me permite explorar um pouco mais a utilização de `refs`. 
@@ -13,3 +15,9 @@ Uma variação do projeto cardlimit: agora usamos o Datomic para salvar as infor
 
 ## alura-explorando-testes:
 Aqui apresento um compilado de códigos ref. ao curso **Clojure: Explorando testes** da Alura. Neste projeto, como o próprio nome já diz, exploramos um pouco sobre testes automátizados utilizando o Clojure.
+
+## clojure-property-based-test
+Aqui apresento um compilado de testes. O diferencial entre este projeto e o projeto alura-explorando-testes é que aqui vemos a utilização de uma biblioteca para geração automática de dados.
+
+## defprotocoltraining
+Um projeto bem simples aplicando alguns conceitos de defprotocol e defrecord.
