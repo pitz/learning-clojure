@@ -1,13 +1,10 @@
-### Learning Clojure
+## Learning Clojure
 Este repositório conterá alguns projetos que estou criando a fim de evoluir meus conhecimentos com Clojure.
+1. [Cálculo de limites para cartões](#card-limit)
+2. [Cálculo de limites para cartões (com Datomic)](#cardlimit-wdb)
+1. [Explorando testes unitários em Clojure (Alura)](#alura-explorando-testes)
 
-# Table of Contents
-1. [card-limit](#card-limit)
-2. [alura-explorando-testes](#alura-explorando-testes)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
-
-## card-limit
+## card-limit:
 O projeto card-limit apresenta o meu primeiro contato com o uso de `schema.core` e me permite explorar um pouco mais a utilização de `refs`. 
 Neste projeto simulo o input de alguns usuários e calculo (usando um `rand` safado) o Score que este cliente possui a fim de definir qual banda de cartão de crédito pode ser disponibilizado para ele.
 
