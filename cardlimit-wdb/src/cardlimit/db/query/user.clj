@@ -10,6 +10,9 @@
                   [?user :user/name ?name]
                   [?user :user/cpf  ?cpf]] database)))
 
+;(defn get-product [db id]
+;  (d/pull db '[*] id))
+
 (defn get-user [conn id]
   (let [users (let [database (d/db conn)]
                (d/q '[:find   ?id ?name ?cpf

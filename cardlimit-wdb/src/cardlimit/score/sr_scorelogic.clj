@@ -25,7 +25,7 @@
   (let [index-score (rand-int 100)
         score       (get-score-band index-score)
         score       (assoc score :userscore/user-id (get user :user/id))
-        score       (assoc score :userscore/id (java.util.UUID/randomUUID))]
+        score       (assoc score :userscore/id (c.model/new-uuid))]
     score))
 
 (defrecord SerasaScoreCalculator [score-list conn] c.score/ScoreCalculator
