@@ -4,7 +4,8 @@ Este repositório conterá alguns projetos que estou criando a fim de evoluir me
 2. [cardlimit-wdb: Cálculo de limites para cartões (com Datomic)](#cardlimit-wdb)
 3. [alura-explorando-testes: Explorando testes unitários em Clojure (Alura)](#alura-explorando-testes)
 4. [clojure-property-based-test: Explorando testes de propriedade em Clojure (Alura)](#clojure-property-based-test)
-4. [defprotocoltraining: Bricando um pouco com defprotocol e  defrecord](#clojure-property-based-test)
+5. [defprotocoltraining: Bricando um pouco com defprotocol e  defrecord](#clojure-property-based-test)
+6. [components: Aplicando o uso do framework Component](#components)
 
 ## card-limit:
 O projeto card-limit apresenta o meu primeiro contato com o uso de `schema.core` e me permite explorar um pouco mais a utilização de `refs`. 
@@ -21,3 +22,6 @@ Aqui apresento um compilado de testes. O diferencial entre este projeto e o proj
 
 ## defprotocoltraining
 Um projeto bem simples aplicando alguns conceitos de defprotocol e defrecord.
+
+## components
+Projeto aplicando alguns conceitos do framework Component (https://github.com/stuartsierra/component). O código apresentado neste projeto foi obtido através de um treinamento feito por Job Travaini (Lead Software Engineer at Nubank).
