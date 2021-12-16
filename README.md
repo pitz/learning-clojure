@@ -10,10 +10,6 @@ Neste projeto simulo o input de alguns usuários e calculo (usando um `rand` saf
 
 ## cardlimit-wdb:
 Uma variação do projeto cardlimit: agora usamos o Datomic para salvar as informações dos Usuários e seus Scores. Aqui eu também aplico algumas refatorações (e deveria aplicar mais rs).
-Uma variação do projeto cardlimit: agora usamos o Datomic para salvar as informações dos Usuários e seus Scores. Aqui eu também aplico algumas refatorações (e deveria aplicar mais rs).
-Uma variação do projeto cardlimit: agora usamos o Datomic para salvar as informações dos Usuários e seus Scores. Aqui eu também aplico algumas refatorações (e deveria aplicar mais rs).
-Uma variação do projeto cardlimit: agora usamos o Datomic para salvar as informações dos Usuários e seus Scores. Aqui eu também aplico algumas refatorações (e deveria aplicar mais rs).
-Uma variação do projeto cardlimit: agora usamos o Datomic para salvar as informações dos Usuários e seus Scores. Aqui eu também aplico algumas refatorações (e deveria aplicar mais rs).
 
 ## alura-explorando-testes:
 Aqui apresento um compilado de códigos ref. ao curso **Clojure: Explorando testes** da Alura. Neste projeto, como o próprio nome já diz, exploramos um pouco sobre testes automátizados utilizando o Clojure.
