@@ -4,7 +4,8 @@
             [cardlimit.model           :as c.model]
             [cardlimit.parsers         :as c.parser]
             [cardlimit.utils           :as c.utils]
-            [cardlimit.protocols.score :as c.score]))
+            [cardlimit.protocols.score :as c.score]
+            [cardlimit.db.query.user   :as db.user]))
 
 (s/defn get-score-band [score :- s/Num]
   (cond
@@ -16,22 +17,27 @@
 (defn calculate-score [user]
   (let [index-score (rand 1)
         score       (get-score-band index-score)]
-    (assoc score :userscore/user (get user :id))))
+    (assoc score :userscore/user-id (get user :user/id))))
 
-(defrecord BoaVistaScoreCalculator [score-list] c.score/ScoreCalculator
+(defrecord BoaVistaScoreCalculator [score-list conn] c.score/ScoreCalculator
+
   (calculate! [this user]
     (let [score (calculate-score user)]
       (swap! score-list conj score)
       (get @score-list user)))
+
+  (save-analysis! [this]
+    (println "..."))
+
   (print-score [this]
     (println "-------------------")
     (println "- B O A V I S T A -")
     (println "-------------------")
     (doseq [score @(get this :score-list)]
-      (let [user        (get score :userscore/user)
+      (let [user        (db.user/get-user conn (get score :userscore/user-id))
             user-name   (get user  :user/name)
             user-cpf    (get user  :user/cpf)
-            score-index (get score :user/score)
+            score-index (get score :userscore/score)
             card-band   (c.parser/parse-band-name (get score :band))
             card-limit  (get score :userscore/initial-limit)
             user-message  (str "[->] Cliente " user-name " (" user-cpf ").")

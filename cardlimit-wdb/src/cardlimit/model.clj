@@ -11,8 +11,7 @@
                      {:id 4 :cpf "07561995906" :name "Vfrardo Pitz"}
                      {:id 5 :cpf "12861995906" :name "Fruardo Pitz"}])
 
-; isso ta bem ruim.
-(def starter-user-values  { :userscore/band :starter  :userscore/initial-limit 50.00    :userscore/minimum-score 0  })
-(def gold-user-values     { :userscore/band :gold     :userscore/initial-limit 650.00   :userscore/minimum-score 10 })
-(def platinum-user-values { :userscore/band :platinum :userscore/initial-limit 1550.00  :userscore/minimum-score 50 })
-(def upmarket-user-values { :userscore/band :upmarket :userscore/initial-limit 12050.50 :userscore/minimum-score 90 })
+(def starter-user-values  { :userscore/band :starter  :userscore/initial-limit 50.00M    })
+(def gold-user-values     { :userscore/band :gold     :userscore/initial-limit 650.00M   })
+(def platinum-user-values { :userscore/band :platinum :userscore/initial-limit 1550.00M  })
+(def upmarket-user-values { :userscore/band :upmarket :userscore/initial-limit 12050.50M })

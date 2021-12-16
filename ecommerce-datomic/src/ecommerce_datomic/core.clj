@@ -32,3 +32,9 @@
 ;
 ;; depois
 ;(pprint (count (db/get-all-products (db/as-of) #inst "2019-09-18T17:36:34.200")))
+
+; LER MAIS SOBRE DEFRECORD.
+;(defrecord JavaDatabase [url conn])
+;(->JavaDatabase "url" "conn")
+;(map->JavaDatabase { :url  "url" })
+;(map->JavaDatabase { :conn "conn" })
